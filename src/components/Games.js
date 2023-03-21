@@ -1,28 +1,12 @@
 import React from "react";
 
-import { formatResult } from "../utils/arrayFn";
+import SingleGame from "./SingleGame";
 
-export const Games = ({ games, status }) => {
+export const Games = ({ games, finish }) => {
   return (
     <div className="results">
       {games.map((game) => {
-        return (
-          <div className="singleMatch">
-            <div className="teams">
-              {game.teamHome} - {game.teamAway}
-            </div>
-
-            <div className="result">
-              {game.finalResult.length !== 0 && formatResult(game.finalResult)}
-            </div>
-
-            <div className="action">
-              <button onClick={() => {}}>START</button>
-              <button onClick={() => {}}>UPDATE</button>
-              <button onClick={() => {}}>FINISH</button>
-            </div>
-          </div>
-        );
+        return <SingleGame key={game.match_id} match={game} finish={finish} />;
       })}
     </div>
   );
