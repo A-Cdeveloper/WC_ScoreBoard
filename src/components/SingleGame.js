@@ -3,6 +3,12 @@ import { formatResult } from "../utils/arrayFn";
 
 const SingleGame = ({ match, finish }) => {
   const { match_id, teamHome, teamAway, finalResult, resultChanges } = match;
+  const [result, setResult] = useState(finalResult);
+
+  const startGameHandler = () => {
+    setResult([0, 0]);
+  };
+
   return (
     <div className="singleMatch">
       <div className="teams">
@@ -10,15 +16,20 @@ const SingleGame = ({ match, finish }) => {
       </div>
 
       <div className="result">
-        {finalResult.length !== 0 && formatResult(finalResult)}
+        {result.length !== 0 && formatResult(result)}
       </div>
-      {!finish && (
-        <div className="action">
-          <button onClick={() => {}}>START</button>
-          <button onClick={() => {}}>UPDATE</button>
-          <button onClick={() => {}}>FINISH</button>
-        </div>
-      )}
+
+      <div className="action">
+        {!finish && result.length === 0 && (
+          <button onClick={() => startGameHandler(match_id)}>START</button>
+        )}
+        {!finish && result.length !== 0 && (
+          <>
+            <button onClick={() => {}}>UPDATE</button>
+            <button onClick={() => {}}>FINISH</button>
+          </>
+        )}
+      </div>
     </div>
   );
 };
