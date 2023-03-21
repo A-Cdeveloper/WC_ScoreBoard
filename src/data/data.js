@@ -1,0 +1,67 @@
+export const matches = [
+  {
+    match_id: 1,
+    teamHome: "Mexico",
+    teamAway: "Canada",
+    finalResult: [],
+    resultChanges: [
+      [0, 1],
+      [1, 0],
+      [0, 1],
+      [1, 0],
+      [1, 0],
+      [1, 0],
+    ],
+  },
+  {
+    match_id: 2,
+    teamHome: "Spain",
+    teamAway: "Brazil",
+    finalResult: [],
+    resultChanges: [
+      [0, 1],
+      [0, 1],
+      [0, 1],
+      [0, 1],
+    ],
+  },
+  {
+    match_id: 3,
+    teamHome: "Germany",
+    teamAway: "France",
+    finalResult: [],
+    resultChanges: [
+      [0, 1],
+      [0, 1],
+      [0, 1],
+    ],
+  },
+  {
+    match_id: 4,
+    teamHome: "Uruguay",
+    teamAway: "Italy",
+    finalResult: [],
+    resultChanges: [
+      [0, 1],
+      [0, 1],
+      [0, 1],
+      [0, 1],
+      [1, 0],
+      [1, 0],
+      [0, 1],
+      [1, 0],
+      [1, 0],
+    ],
+  },
+  {
+    match_id: 5,
+    teamHome: "Argentina",
+    teamAway: "Australia",
+    finalResult: [],
+    resultChanges: [
+      [0, 1],
+      [0, 1],
+      [0, 1],
+    ],
+  },
+];
