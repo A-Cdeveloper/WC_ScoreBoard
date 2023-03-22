@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { matches } from "./data/data";
+import { sortGames } from "./utils/arrayFn";
 
 import Games from "./components/Games";
 
@@ -29,7 +30,10 @@ function App() {
           endGameHandler={endGameHandler}
         />
       )}
-      {finishGames.length !== 0 && <Games games={finishGames} finish={true} />}
+
+      {finishGames.length !== 0 && (
+        <Games games={sortGames(finishGames)} finish={true} />
+      )}
     </div>
   );
 }
